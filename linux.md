@@ -10,15 +10,15 @@ Move to a folder: cd
 
 See files in a folder: ls
 
-See your location: pwd
+See your location: ```pwd```
 
-Copy a file: cp
+Copy a file: ```cp```
 
 Move or change a file name: mv
 
-Delete a file: rm
+Delete a file: ```rm```
 
-Delete a folder: rm -rf
+Delete a folder: ``` rm -rf```
 
 📊 Check Your Computer
 You must check your computer. It helps it work well and not have problems.
@@ -29,13 +29,13 @@ Check Disk Space
 Check your disk space. A full disk can stop the computer.
 
 Commands to remember:
-
+```
 df -h: Show disk space. It is a fast way.
 
 du -sh /path/to/directory: Show how big a folder is.
 
 du -sch /path/* | sort -h: See which files are the biggest in a folder.
-
+```
 Job Interview Questions:
 
 Q: How do you know the disk is full?
@@ -50,13 +50,13 @@ Check Memory (RAM)
 Check memory to see if the computer is fast.
 
 Commands to remember:
-
+```
 free -h: See how much memory is free.
 
 top / htop: See which program uses a lot of memory.
 
 ps aux --sort=-%mem: See the program that uses the most memory.
-
+```
 Job Interview Questions:
 
 Q: What is Swap space?
@@ -71,13 +71,13 @@ Check CPU Usage
 Check the CPU to see if the computer is busy.
 
 Commands to remember:
-
+```
 top / htop: Good tools to see the CPU in real-time.
 
 uptime: See how long the computer is on. It also shows the load average.
 
 ps aux --sort=-%cpu: See the program that uses the most CPU.
-
+```
 Job Interview Questions:
 
 Q: What is "Load Average"?
@@ -107,7 +107,7 @@ Use Scripts
 Scripts help you do tasks fast. They save time and stop mistakes.
 
 Example Script: This script finds old files and deletes them.
-
+```
 #!/bin/bash
 
 # Path to the logs folder
@@ -130,7 +130,7 @@ find "$LOG_DIR" -type f -name "*.log.gz" -mtime +30 -delete
 echo "Log rotation is done."
 
 exit 0
-
+```
 Deploy New Software
 Deploying is to put a new program on a server. It can be a manual or an automatic process.
 
@@ -141,8 +141,8 @@ Q: How to deploy with no server downtime?
 A: I use a special way. For example, Blue/Green or Canary deploy. The old program works until the new one is ready.
 
 
-Лицензировано Google
 Simple Commands Summary
+```
 df -h: Check disk space.
 
 du -sh /path: Check a folder size.
@@ -162,3 +162,4 @@ chmod +x script.sh: Make a script run.
 ps aux | grep java: Find a java program.
 
 kill -9 PID: Stop a program fast.
+```
