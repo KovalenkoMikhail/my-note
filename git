@@ -1,0 +1,148 @@
+🐙 Git Cheatsheet
+Welcome to your personal Git cheatsheet, formatted for a GitHub README. This guide covers key concepts, essential commands, and advanced topics to help you manage your projects and collaborate with others.
+
+🔑 Key Concepts
+Branching: The foundation of teamwork. You work in a separate branch to develop features without affecting the main codebase.
+
+Pro Tip: git checkout -b feature-123 is a great shortcut to create and switch to a new branch.
+
+Merging: The process of combining changes from your branch back into the main branch. You can use git merge or git rebase.
+
+Pull/Merge Requests (PR/MR): A mechanism to propose your changes. This is where you get feedback and your code is reviewed by teammates. Think of it as: "I'm done, please take a look."
+
+Merge Conflicts: These happen when Git can't automatically combine changes. It's important to know how to resolve them.
+
+CI/CD: Using automated pipelines (like GitHub Actions or GitLab CI) that run tests and build your code when you push or merge.
+
+🚀 Basic Commands
+
+# Clone a repository from GitHub
+
+git clone <url>
+
+# See what files you've changed
+
+git status
+
+# Add all your changes to the staging area
+
+git add .
+
+# Save the staged changes with a message
+
+git commit -m "Your message"
+
+# Send your local changes to GitHub
+
+git push origin HEAD
+
+# Download and merge the latest changes from the server
+
+git pull
+
+# See the history of all commits
+
+git log
+
+# A short, compact view of your commit history
+
+git log --oneline
+
+🌳 Branching & Merging
+
+# List all your local branches
+
+git branch
+
+# Create a new branch
+
+git branch <branch-name>
+
+# Switch to a different branch
+
+git checkout <branch-name>
+
+# Create a new branch and switch to it
+
+git checkout -b <new-branch-name>
+
+# Merge the specified branch into your current branch
+
+git merge <branch-name>
+
+# Delete a local branch
+
+git branch -d <branch-name>
+
+🌐 Remote Repositories
+
+# Show the list of remote repositories
+
+git remote -v
+
+# Send your commits to the remote repository
+
+git push
+
+# Download changes from the remote, but don't merge them yet
+
+git fetch
+
+⚠️ "Dangerous" Commands (Use with caution!)
+
+# Change your last commit (rewrites history)
+
+git commit --amend
+
+# Move your commits on top of another branch (rewrites history)
+
+# Never use on a public branch.
+
+git rebase <base-branch>
+
+# Remove all uncommitted changes
+
+git reset --hard
+
+# Create a new commit that undoes the changes of a previous one (safe)
+
+git revert <commit-hash>
+
+💡 Git Flow
+Git Flow is a popular branching strategy.
+
+Main Branches
+master: This branch only has stable code that is ready to be deployed.
+
+develop: The main branch for all active development.
+
+Temporary Branches
+feature/name: Created from develop to build a new feature. Merges back into develop when done.
+
+release/version: Created from develop to prepare for a new release.
+
+hotfix/name: Created from master for urgent bug fixes in production.
+
+Perfect Hotfix Flow
+Create: Make a hotfix branch from main to quickly fix the issue.
+
+Fix & PR: Make your changes and create a Pull Request to merge the fix into main.
+
+Test: After the fix is in main, test it in a staging environment to make sure it works and doesn't break anything else.
+
+Cherry-pick: If a release branch already exists, cherry-pick the fix commit into that branch. This is crucial for getting the fix out quickly.
+
+Tag: Create a new tag (e.g., v5.1) from the release branch and deploy this tag to production.
+
+❓ Interview Questions (Senior Level)
+Question: Describe your typical Git workflow. What branching strategy do you use?
+
+Answer: Talk about the feature-branch workflow, creating a PR for code review, and waiting for approval.
+
+Question: You were working on a feature, but important changes were made in the main branch. How do you sync your branch? Which would you choose: git merge or git rebase? Why?
+
+Answer: I would choose git rebase because it creates a cleaner, more linear commit history. merge creates an extra merge commit, which can clutter the history.
+
+Question: How would you use GitHub/GitLab to automatically run tests?
+
+Answer: I would use a CI/CD pipeline. GitHub Actions or GitLab CI/CD can be configured to automatically run tests after every push or PR to ensure code quality.
