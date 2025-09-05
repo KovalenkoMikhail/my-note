@@ -21,93 +21,93 @@ CI/CD: Using automated pipelines (like GitHub Actions or GitLab CI) that run tes
 git clone <url>
 ```
 # See what files you've changed
-
+```
 git status
-
+```
 # Add all your changes to the staging area
-
+```
 git add .
-
+```
 # Save the staged changes with a message
-
+```
 git commit -m "Your message"
-
+```
 # Send your local changes to GitHub
-
+```
 git push origin HEAD
-
+```
 # Download and merge the latest changes from the server
-
+```
 git pull
-
+```
 # See the history of all commits
-
+```
 git log
-
+```
 # A short, compact view of your commit history
-
+```
 git log --oneline
-
+```
 🌳 Branching & Merging
 
 # List all your local branches
-
+```
 git branch
-
+```
 # Create a new branch
-
+```
 git branch <branch-name>
-
+```
 # Switch to a different branch
-
+```
 git checkout <branch-name>
-
+```
 # Create a new branch and switch to it
-
+```
 git checkout -b <new-branch-name>
-
+```
 # Merge the specified branch into your current branch
-
+```
 git merge <branch-name>
-
+```
 # Delete a local branch
-
+```
 git branch -d <branch-name>
-
+```
 🌐 Remote Repositories
 
 # Show the list of remote repositories
-
+```
 git remote -v
-
+```
 # Send your commits to the remote repository
-
+```
 git push
-
+```
 # Download changes from the remote, but don't merge them yet
-
+```
 git fetch
-
+```
 ⚠️ "Dangerous" Commands (Use with caution!)
 
 # Change your last commit (rewrites history)
-
+```
 git commit --amend
-
+```
 # Move your commits on top of another branch (rewrites history)
 
 # Never use on a public branch.
-
+```
 git rebase <base-branch>
-
+```
 # Remove all uncommitted changes
-
+```
 git reset --hard
-
+```
 # Create a new commit that undoes the changes of a previous one (safe)
-
+```
 git revert <commit-hash>
-
+```
 💡 Git Flow
 Git Flow is a popular branching strategy.
 
