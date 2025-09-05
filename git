@@ -17,9 +17,9 @@ CI/CD: Using automated pipelines (like GitHub Actions or GitLab CI) that run tes
 🚀 Basic Commands
 
 # Clone a repository from GitHub
-
+```
 git clone <url>
-
+```
 # See what files you've changed
 
 git status
